@@ -34,6 +34,7 @@ export async function authenticateUser({ login, senha }) {
   const doc = snap.docs[0];
   return {
     id:    doc.id,
-    login: doc.data().login
+    login: data.login,
+    email: data.email || ''  
   };
 }
